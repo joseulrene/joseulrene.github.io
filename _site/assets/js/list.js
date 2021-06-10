@@ -45,24 +45,28 @@ var items = [
 ];
 
 var i = 0;
-items.sort((a,b) => {
-    var r = a.date > b.date ? 1 : 
-        a.date < b.date ? -1 :
-            (!a.t[0] && !a.t[1]) ? 1 :
-                (!b.t[0] && !b.t[1]) ? -1 : 
-                    a.t[0] > b.t[0] ? 1 :
-                        a.t[0] < b.t[0] ? -1 :
-                            a.t[1] > b.t[1] ? 1 : -1
-    i += 1;
-    return r;
-});
+// items.sort((a,b) => {
+//     var r = a.date > b.date ? 1 : 
+//         a.date < b.date ? -1 :
+//             (!a.t[0] && !a.t[1]) ? 1 :
+//                 (!b.t[0] && !b.t[1]) ? -1 : 
+//                     a.t[0] > b.t[0] ? 1 :
+//                         a.t[0] < b.t[0] ? -1 :
+//                             a.t[1] > b.t[1] ? 1 : -1
+//     i += 1;
+//     return r;
+// });
 
 
-export const list = items.map(i => {
-    var vliveurl = `https://vlive.tv/embed/${i.id}?&begin=${i.t[0]*60+i.t[1]}&end=${i.t[2]*60+i.t[3]}`;
-    var yturl = `https://youtube.com/embed /${i.id}?start=${i.t[0]*60+i.t[1]}&end=${i.t[2]*60+i.t[3]}`;
+var list = items.map(i => {
+    var start = i.t[0]*60+i.t[1];
+    var end = i.t[2]*60+i.t[3];
+    var sort = start == 0 ? i.date + "-full" : i.date + "-" + start;
+    var vliveurl = `https://vlive.tv/embed/${i.id}?&begin=${start}&end=${end}`;
+    var yturl = `https://youtube.com/embed /${i.id}?start=${start}&end=${end}`;
     return {
         id: i.id,
+        sort: sort,
         url: i.vlive ? vliveurl : yturl,
         date : i.date,
         text: i.text,
@@ -76,5 +80,19 @@ const data = new Blob([JSON.stringify(list)], { type: 'text/plain' })
 if (downloadLink !== '') window.URL.revokeObjectURL(downloadLink)
 // update the download link state
 downloadLink = window.URL.createObjectURL(data);
-console.log(downloadLink)
-document.getElementById("jsondata").setAttribute("href",downloadLink)
+// console.log(downloadLink)
+document.getElementById("jsondata").setAttribute("href",downloadLink);
+var yamlString = "";
+list.map(i => {
+    for (var p in i){
+        var newLine = `  ${p}: ${i[p]}\n`;
+        if (p == "id") newLine = newLine.replace("  ","- ");
+        yamlString += newLine;
+    }
+})
+console.log(yamlString);
+const yamldata = new Blob([yamlString], { type: 'text/plain' });
+var yamlLink = ""
+if (yamlLink !== '') window.URL.revokeObjectURL(yamlLink);
+yamlLink = window.URL.createObjectURL(yamldata);
+document.getElementById("yamldata").setAttribute("href",yamlLink)

@@ -1,28 +1,36 @@
 - id: 6436
-  type: vlive
+  sort: 160315-456
+  url: https://vlive.tv/embed/6436?&begin=456&end=482
   date: 160315
   text: wendy thought seulrene were about to kiss in the ootn teaser
-  t: 
-    start:
-      min: 7
-      sec: 36
-    end:
-      min: 8
-      sec: 2
+  bonus: 
 - id: 14431
-  type: vlive
+  sort: 161001-978
+  url: https://vlive.tv/embed/14431?&begin=978&end=1434
   date: 161001
   text: about close friends (wendy are you watching?)
   bonus: they are so awkward singing together it's killing me and when irene just goes 'what??' omfg
-  t: 
-    start:
-      min: 16
-      sec: 18
-    end:
-      min: 23
-      sec: 54
 - id: 14431
-  type: vlive
+  sort: 161001-full
+  url: https://vlive.tv/embed/14431?&begin=0&end=0
   date: 161001
   text: this whole thing honestly
-  t: [0,0,0,0]
+  bonus: 
+- id: 14431
+  sort: 161001-1517
+  url: https://vlive.tv/embed/14431?&begin=1517&end=1617
+  date: 161001
+  text: trainee stories part 1
+  bonus: 
+- id: 14431
+  sort: 161001-1688
+  url: https://vlive.tv/embed/14431?&begin=1688&end=0
+  date: 161001
+  text: 
+  bonus: 
+- id: 
+  sort: null-full
+  url: https://vlive.tv/embed/?&begin=0&end=0
+  date: null
+  text: 
+  bonus: 

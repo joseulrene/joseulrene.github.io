@@ -1,0 +1,6 @@
+---
+layout: default
+---
+{% for m in site.moments %}
+    {{ m.output | markdownify }}
+{% endfor %}

@@ -1,4 +1,8 @@
 - name: Home
   link: /
-- name: About
-  link: /about.html
+- name: List
+  link: /list.html
+- name: json file
+  dl: id="jsondata" download='list.json'
+- name: yaml file
+  dl: id="yamldata" download='moments2.yml'

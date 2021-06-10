@@ -1,8 +1,9 @@
 <nav>
-  {%comment%}
     {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+      <a href="{{ item.link }}" 
+        {% if page.url == item.link %}class="current"{% endif %}
+        {% if item.dl %} {{item.dl}} {% endif %}
+        >{{ item.name }}</a>
     {% endfor %}
-    {%endcomment%}
-    <a id="jsondata" download='list.json' href="">get json</a>
+    <!--a id="jsondata" download='list.json' href="">get json</a-->
 </nav>
