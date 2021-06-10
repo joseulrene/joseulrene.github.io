@@ -1,19 +1,12 @@
+<div class='container-fluid'>
 {% assign groupDate = site.data.moments | group_by: "date" %}
 {% for i in groupDate %}
     {% assign groupId = i.items | group_by: "id" %}
     {% for i in groupId %}
         {% assign sortStart = i.items | sort: "start" %}
         {% for i in sortStart %}
-            <p> 
-                
-                [{{i.date}}] 
-                <a href="{{i.url}}" target="_blank">
-                    {{i.text}}</a>  
-                {% if i.bonus %}
-                    <br/><strike>{{i.bonus}}</strike>
-                {% endif %}
-                
-            </p>    
+            {% include item.html param=i%}    
         {% endfor %}   
     {% endfor %}
 {% endfor %}
+</div>

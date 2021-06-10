@@ -1,6 +1,34 @@
----
-
----
-
-[{{i.date}}] [{{i.text}}]({{i.url}})    
-{% if i.bonus %}~~{{i.bonus}}~~{% endif %}
+{% assign hrefUrl = i.url | replace "vlive.tv/embed", "vlive.tv/video" %}
+{% assign hrefUrl = i.url | replace "www.youtube.com/embed", "youtu.be" %}
+<!--div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{i.text}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{i.bonus}}</h6>
+      <button type="button" onclick="setEmbed('{{i.text}}','{{i.url}}')" class="btn btn-link">Embed</button>
+      <a href="{{hrefUrl}}" target="_blank">
+          <button type="button" class="btn btn-link">Go to video</button>
+        </a>
+    </div>
+  </div-->
+  <div class="card mb-3">
+    <div class="card-header">{{i.date}}</div>
+    <div class="card-body">
+      <p class="card-text">
+        {{i.text}}
+      </p>
+      <p class='card-text text-muted'>
+        {{i.bonus}}
+      </p>
+    </div>
+    <div class="card-footer">
+        <button 
+            type="button" 
+            onclick="setEmbed('{{i.text}}','{{i.url}}')" 
+            class="btn btn-link float-end">
+            Embed here
+        </button>
+      <a href="{{hrefUrl}}" target="_blank">
+          <button type="button" class="btn btn-link float-end">Go to video page</button>
+        </a>
+    </div>
+  </div>
