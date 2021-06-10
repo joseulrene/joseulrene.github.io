@@ -1,0 +1,12 @@
+{% for item in site.data.moments %}
+<p>
+    <a href="" 
+    {% if page.url == item.link %}
+      class="current"
+    {% endif %}>
+      {{ item.text }}
+    </a>
+    <strike>{{item.bonus}}</strike>
+</p>
+      
+{% endfor %}
