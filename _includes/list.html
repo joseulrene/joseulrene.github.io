@@ -1,0 +1,16 @@
+{% assign groupDate = site.data.moments | group_by: "date" %}
+{% for i in groupDate %}
+    {% assign groupId = i.items | group_by: "id" %}
+    {% for i in groupId %}
+        {% assign sortStart = i.items | sort: "start" %}
+        {% for i in sortStart %}
+            <p> 
+                {% capture item %}
+                [{{i.date}}] [{{i.text}}]({{i.url}})  
+                {% if i.bonus %}~~{{i.bonus}}~~{% endif %}
+                {% endcapture %}
+                {{ item | markdownify }}
+            </p>    
+        {% endfor %}   
+    {% endfor %}
+{% endfor %}
