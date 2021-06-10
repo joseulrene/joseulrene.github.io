@@ -1,54 +1,14 @@
-{% assign hrefUrl = i.url | replace "vlive.tv/embed", "vlive.tv/video" %}
-{% assign hrefUrl = i.url | replace "www.youtube.com/embed", "youtu.be" %}
-<!--div class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title">{{i.text}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{i.bonus}}</h6>
-      <button type="button" onclick="setEmbed('{{i.text}}','{{i.url}}')" class="btn btn-link">Embed</button>
-      <a href="{{hrefUrl}}" target="_blank">
-          <button type="button" class="btn btn-link">Go to video</button>
-        </a>
-    </div>
-  </div-->
 <div class="card mb-3">
-    <!--div class="card-header">{{i.date}}</div-->
     <div class="card-body">
         <div class="card-text float-start moment-title">
             [{{i.date}}] {{i.text}}
         </div>
-      <!-- {% if i.bonus %}
-      <small class='card-text text-muted float-end'>
-        {{i.bonus}}
-      </small>
-      {% endif %} -->
-        <!-- <button 
-            type="button" 
-            onclick="setEmbed('{{i.text}}','{{i.url}}')" 
-            class="btn btn-link float-end"
-            data-mdb-toggle="modal"
-            data-mdb-target="#modalEmbed"
-            >
-            Load
-        </button> -->
-        <a  href="{{hrefUrl}}" 
+    
+        <a  href="{{i.url}}" 
             target="_blank" 
             role="button" 
-            class="btn btn-link float-end">
-                Go to video page
-        </a>
-
-    
-        
+            class="btn btn-link float-end btn-lg">
+            <i class="fas fa-external-link-alt"></i>
+        </a>        
     </div>
-    <!--div class="card-footer">
-        <button 
-            type="button" 
-            onclick="setEmbed('{{i.text}}','{{i.url}}')" 
-            class="btn btn-link float-end">
-            Embed here
-        </button>
-      <a href="{{hrefUrl}}" target="_blank">
-          <button type="button" class="btn btn-link float-end">Go to video page</button>
-        </a>
-    </div-->
   </div>
