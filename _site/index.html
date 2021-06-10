@@ -23,94 +23,37 @@
     
   </head>
   <body>
-    <div class="container-md">
-      <nav>
-    
-      <a href="/" 
-        class="current"
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <div class="navbar-nav d-flex justify-content-center">
         
-        >Home</a>
-    
-      <a href="/list.html" 
+        <a class="nav-link 
+         active" aria-current="page"
+        href="/">Home</a>
         
+        <a class="nav-link 
+        "
+        href="/new.html">New</a>
         
-        >List</a>
-    
-      <a href="" 
+        <a class="nav-link 
+        "
+        href="">json file</a>
         
-         id="jsondata" download='list.json' 
-        >json file</a>
-    
-      <a href="" 
+        <a class="nav-link 
+        "
+        href="">yaml file</a>
         
-         id="yamldata" download='moments.yml' 
-        >yaml file</a>
-    
-    <!--a id="jsondata" download='list.json' href="">get json</a-->
-</nav>
-      <!-- Jumbotron -->
-<div class="p-5 text-center">
-  <h1 class="mb-3">it's a seulrene world. we just live in it</h1>
-  <!-- <button
-  type="button"
-  class="btn btn-link"
-  data-mdb-toggle="modal"
-  data-mdb-target="#modalEmbed"
->
-    open embeded player
-</button> -->
-<!-- Modal -->
-<div
-  class="modal fade "
-  id="modalEmbed"
-  data-mdb-backdrop="static"
-  data-mdb-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="modalEmbedLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalEmbedLabel">No video loaded</h5>
-        <!-- <button
-          type="button"
-          class="btn-close"
-          data-mdb-dismiss="modal"
-          aria-label="Close"
-        ></button> -->
-      </div>
-      <div class="modal-body">
-          <div class="video-responsive">
-    <iframe
-        id="embed"
-        width="853"
-        height="480"
-        src=""
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded Video">
-    </iframe>
-    <!--https://www.youtube.com/embed/lNvBbh5jDcA-->
-</div>
-      </div>
-      <div class="modal-footer">
-        <button 
-            type="button" 
-            class="btn btn-link" 
-            data-mdb-dismiss="modal"
-            onclick="setEmbed('','')">
-          Close
-        </button>
-        <!--button type="button" class="btn btn-primary">Understood</button-->
       </div>
     </div>
   </div>
-</div>
+</nav>
+    <div class="container-md">
+      <!-- Jumbotron -->
+<div class="p-5 text-center">
+  <h1 class="mb-3">it's a seulrene world. we just live in it</h1>
 </div>
 <!-- Jumbotron -->
-<div class="container-fluid">
+<div class="container-lg">
   <div class='container-fluid'>
 
 
@@ -120,16 +63,21 @@
         
             <div class="card mb-3">
     <div class="card-body">
-        <div class="card-text float-start moment-title">
-            [160315] wendy thought seulrene were about to kiss in the ootn teaser
+        <div class="d-flex justify-content-between">
+            <div class="card-text moment-title">
+                [160315] wendy thought seulrene were about to kiss in the ootn teaser
+            </div>
+
+            <a  href="https://vlive.tv/video/6436?&begin=456&end=482" 
+                target="_blank" 
+                role="button" 
+                class="btn btn-link btn-lg d-flex align-items-center justify-content-center">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+            </a>
         </div>
+        
     
-        <a  href="https://vlive.tv/video/6436?&begin=456&end=482" 
-            target="_blank" 
-            role="button" 
-            class="btn btn-link float-end btn-lg">
-            <i class="fas fa-external-link-alt"></i>
-        </a>        
+                
     </div>
   </div>    
            
@@ -141,61 +89,81 @@
         
             <div class="card mb-3">
     <div class="card-body">
-        <div class="card-text float-start moment-title">
-            [161001] about close friends (wendy are you watching?)
+        <div class="d-flex justify-content-between">
+            <div class="card-text moment-title">
+                [161001] about close friends (wendy are you watching?)
+            </div>
+
+            <a  href="https://vlive.tv/video/14431?&begin=978&end=1434" 
+                target="_blank" 
+                role="button" 
+                class="btn btn-link btn-lg d-flex align-items-center justify-content-center">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+            </a>
         </div>
+        
     
-        <a  href="https://vlive.tv/video/14431?&begin=978&end=1434" 
-            target="_blank" 
-            role="button" 
-            class="btn btn-link float-end btn-lg">
-            <i class="fas fa-external-link-alt"></i>
-        </a>        
+                
     </div>
   </div>    
         
             <div class="card mb-3">
     <div class="card-body">
-        <div class="card-text float-start moment-title">
-            [161001] trainee stories part 1
+        <div class="d-flex justify-content-between">
+            <div class="card-text moment-title">
+                [161001] trainee stories part 1
+            </div>
+
+            <a  href="https://vlive.tv/video/14431?&begin=1517&end=1617" 
+                target="_blank" 
+                role="button" 
+                class="btn btn-link btn-lg d-flex align-items-center justify-content-center">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+            </a>
         </div>
+        
     
-        <a  href="https://vlive.tv/video/14431?&begin=1517&end=1617" 
-            target="_blank" 
-            role="button" 
-            class="btn btn-link float-end btn-lg">
-            <i class="fas fa-external-link-alt"></i>
-        </a>        
+                
     </div>
   </div>    
         
             <div class="card mb-3">
     <div class="card-body">
-        <div class="card-text float-start moment-title">
-            [161001] ???
+        <div class="d-flex justify-content-between">
+            <div class="card-text moment-title">
+                [161001] ???
+            </div>
+
+            <a  href="https://vlive.tv/video/14431?&begin=1688&end=0" 
+                target="_blank" 
+                role="button" 
+                class="btn btn-link btn-lg d-flex align-items-center justify-content-center">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+            </a>
         </div>
+        
     
-        <a  href="https://vlive.tv/video/14431?&begin=1688&end=0" 
-            target="_blank" 
-            role="button" 
-            class="btn btn-link float-end btn-lg">
-            <i class="fas fa-external-link-alt"></i>
-        </a>        
+                
     </div>
   </div>    
         
             <div class="card mb-3">
     <div class="card-body">
-        <div class="card-text float-start moment-title">
-            [161001] this whole thing honestly
+        <div class="d-flex justify-content-between">
+            <div class="card-text moment-title">
+                [161001] this whole thing honestly
+            </div>
+
+            <a  href="https://vlive.tv/video/14431?&begin=0&end=2959" 
+                target="_blank" 
+                role="button" 
+                class="btn btn-link btn-lg d-flex align-items-center justify-content-center">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+            </a>
         </div>
+        
     
-        <a  href="https://vlive.tv/video/14431?&begin=0&end=2959" 
-            target="_blank" 
-            role="button" 
-            class="btn btn-link float-end btn-lg">
-            <i class="fas fa-external-link-alt"></i>
-        </a>        
+                
     </div>
   </div>    
            

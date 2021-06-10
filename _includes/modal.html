@@ -8,8 +8,8 @@
 </button> -->
 <!-- Modal -->
 <div
-  class="modal fade "
-  id="modalEmbed"
+  class="modal fade"
+  id="modalNew"
   data-mdb-backdrop="static"
   data-mdb-keyboard="false"
   tabindex="-1"
@@ -19,16 +19,18 @@
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalEmbedLabel">No video loaded</h5>
-        <!-- <button
+        <h5 class="modal-title" id="modalEmbedLabel">Add to moments.yml</h5>
+        <button
           type="button"
           class="btn-close"
           data-mdb-dismiss="modal"
           aria-label="Close"
-        ></button> -->
+        ></button>
       </div>
       <div class="modal-body">
-          {% include embedplayer.html %}
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="newMoment" rows="4"></textarea>
+        </div>
       </div>
       <div class="modal-footer">
         <button 

@@ -1,7 +1,7 @@
 - name: Home
   link: /
-- name: List
-  link: /list.html
+- name: New
+  link: /new.html
 - name: json file
   dl: id="jsondata" download='list.json'
 - name: yaml file

@@ -1,9 +1,12 @@
-<nav>
-    {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" 
-        {% if page.url == item.link %}class="current"{% endif %}
-        {% if item.dl %} {{item.dl}} {% endif %}
-        >{{ item.name }}</a>
-    {% endfor %}
-    <!--a id="jsondata" download='list.json' href="">get json</a-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <div class="navbar-nav d-flex justify-content-center">
+        {% for item in site.data.navigation %}
+        <a class="nav-link 
+        {% if page.url == item.link %} active" aria-current="page{% endif %}"
+        href="{{ item.link }}">{{item.name}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </nav>

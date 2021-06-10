@@ -1,0 +1,39 @@
+---
+layout: default
+title: generate new moment
+---
+<div class="p-5 text-center">
+    <h3 class="mb-3">{{page.title}}</h3>
+</div>
+<div class="container form-width">
+  <form id="newMomentForm" onsubmit="return false">
+    <div class="form-outline mb-4">
+        <textarea class="form-control" id="momentText" rows="4"></textarea>
+        <label class="form-label" for="momentText">Text</label>
+      </div>
+    
+    <!-- url -->
+    <div class="form-outline mb-4">
+      <input type="url" id="videoUrl" class="form-control" />
+      <label class="form-label" for="videoUrl">Video URL</label>
+    </div>
+  
+    <!-- timestamp -->
+    <div id="timestamp" class="form-label">
+        Timestamp
+    </div>
+    <div class="input-group mb-4 ">
+        <span class="input-group-text">Start</span>
+        <input type="text" aria-label="start" id="start" class="form-control" />
+        <span class="input-group-text">End</span>
+        <input type="text" aria-label="end" id="end" class="form-control" />
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" onclick="openModalWithCode()" 
+    class="btn btn-link btn-block btn-lg">
+        generate code
+    </button>
+  </form>
+  {%include modal.html%}
+</div>
