@@ -3,4 +3,19 @@ layout: default
 title: Home
 ---
 <h1>{{ "it's a seulrene world we just live in it" | downcase }}</h1>
-{% include item.html %}
+{% assign groupDate = site.data.moments | group_by: "date" %}
+{% for i in groupDate %}
+    {% assign groupId = i.items | group_by: "id" %}
+    {% for i in groupId %}
+        {% assign sortStart = i.items | sort: "start" %}
+        {% for i in sortStart %}
+            <p> 
+                {% capture item %}
+                [{{i.date}}] [{{i.text}}]({{i.url}})  
+                {% if i.bonus %}~~{{i.bonus}}~~{% endif %}
+                {% endcapture %}
+                {{ item }}
+            </p>    
+        {% endfor %}   
+    {% endfor %}
+{% endfor %}

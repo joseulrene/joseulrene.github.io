@@ -1,12 +1,6 @@
-{% for i in site.data.list %}
-  {% if i.date %}
-  <p>
-      <a href="{{i.url}}" target="_blank">
-      [{{i.date}}] {{ i.text }}
-      </a>
-      {% if i.bonus != "" %}
-        <br/><strike>{{i.bonus}}</strike>
-      {% endif %}
-  </p>
-  {% endif %}      
-{% endfor %}
+---
+
+---
+
+[{{i.date}}] [{{i.text}}]({{i.url}})    
+{% if i.bonus %}~~{{i.bonus}}~~{% endif %}

@@ -5,4 +5,4 @@
 - name: json file
   dl: id="jsondata" download='list.json'
 - name: yaml file
-  dl: id="yamldata" download='moments2.yml'
+  dl: id="yamldata" download='moments.yml'

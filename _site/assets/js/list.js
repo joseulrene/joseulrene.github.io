@@ -19,7 +19,7 @@ var items = [
         vlive: true, //yt
         date: 161001,
         text: "this whole thing honestly",
-        t: [0,0,0,0]
+        t: [0,0,49,19]
     },
     {
         id: "14431",
@@ -32,16 +32,16 @@ var items = [
         id: "14431",
         vlive: true, //yt
         date: 161001,
-        text: "",
+        text: "???",
         t: [28,8,0,0,0]
     },
-    {
-        id: "",
-        vlive: true, //yt
-        date: null,
-        text: "",
-        t: [0,0,0,0]
-    },
+    // {
+    //     id: "",
+    //     vlive: true, //yt
+    //     date: null,
+    //     text: "",
+    //     t: [0,0,0,0]
+    // },
 ];
 
 var i = 0;
@@ -61,12 +61,11 @@ var i = 0;
 var list = items.map(i => {
     var start = i.t[0]*60+i.t[1];
     var end = i.t[2]*60+i.t[3];
-    var sort = start == 0 ? i.date + "-full" : i.date + "-" + start;
     var vliveurl = `https://vlive.tv/embed/${i.id}?&begin=${start}&end=${end}`;
-    var yturl = `https://youtube.com/embed /${i.id}?start=${start}&end=${end}`;
+    var yturl = `https://youtube.com/embed/${i.id}?start=${start}&end=${end}`;
     return {
         id: i.id,
-        sort: sort,
+        start: start == 0 ? end : start,
         url: i.vlive ? vliveurl : yturl,
         date : i.date,
         text: i.text,
