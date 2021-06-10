@@ -29,9 +29,9 @@ var items = [
         t: [25,17,26,57]
     },
     {
-        id: "",
+        id: "14431",
         vlive: true, //yt
-        date: null,
+        date: 161001,
         text: "",
         t: [28,8,0,0,0]
     },
@@ -70,17 +70,11 @@ export const list = items.map(i => {
     }
 });
 console.log(list);
-const makeTextFile = () => {
-    // This creates the file. 
-    // In my case, I have an array, and each item in 
-    // the array should be on a new line, which is why
-    // I use .join('\n') here.
-    const data = new Blob([JSON.stringify(list)], { type: 'text/plain' })
-
-    // this part avoids memory leaks
-    if (downloadLink !== '') window.URL.revokeObjectURL(downloadLink)
-
-    // update the download link state
-    setDownloadLink(window.URL.createObjectURL(data))
-  }
-  makeTextFile()
+var downloadLink = ""
+const data = new Blob([JSON.stringify(list)], { type: 'text/plain' })
+// this part avoids memory leaks
+if (downloadLink !== '') window.URL.revokeObjectURL(downloadLink)
+// update the download link state
+downloadLink = window.URL.createObjectURL(data);
+console.log(downloadLink)
+document.getElementById("jsondata").setAttribute("href",downloadLink)

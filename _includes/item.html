@@ -1,23 +1,12 @@
-{% for i in site.data.moments %}
-{% assign start = i.t.start.min | times: 60 | plus: i.t.start.sec %}
-{% assign end = i.t.end.min | times: 60 | plus: i.t.end.sec %}
-<p>
-    <a href="
-    {% case i.type %}
-      {% when 'vlive' %}
-        https://vlive.tv/embed/{{i.id}}?&begin={{start}}
-      {% when 'yt' %}
-        https://youtube.com/embed/{{i.id}}?start={{start}}&end={{end}}
-      {% endcase %}
-    " target="_blank">
-      {{ i.text }}
-    </a>
-    {% if i.bonus != "" %}
-      <br/><strike>{{i.bonus}}</strike>
-    {% endif %}
-</p>
-<script>
-
-</script>
-      
+{% for i in site.data.list %}
+  {% if i.date %}
+  <p>
+      <a href="{{i.url}}" target="_blank">
+      [{{i.date}}] {{ i.text }}
+      </a>
+      {% if i.bonus != "" %}
+        <br/><strike>{{i.bonus}}</strike>
+      {% endif %}
+  </p>
+  {% endif %}      
 {% endfor %}
