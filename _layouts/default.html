@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    
     <link rel="stylesheet" href="/assets/css/mdb.dark.min.css">
-
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div class="container-md">
+      {% include navigation.html %}
+      {{ content }}
+    </div>
   <script type = "text/javascript" src="assets/js/script.js"></script>
+  <script type = "text/javascript" src="assets/js/mdb.min.js"></script>
   </body>
 </html>

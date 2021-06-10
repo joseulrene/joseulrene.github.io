@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>it's a seulrene world. we just live in it</title>
+    
     <link rel="stylesheet" href="/assets/css/mdb.dark.min.css">
-
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <nav>
+    <div class="container-md">
+      <nav>
     
       <a href="/" 
         class="current"
@@ -32,9 +33,70 @@
     
     <!--a id="jsondata" download='list.json' href="">get json</a-->
 </nav>
-    <div class="container-md">
-    <h1>it's a seulrene world. we just live in it</h1>
-    <div class='container-fluid'>
+      <!-- Jumbotron -->
+<div class="p-5 text-center">
+  <h1 class="mb-3">it's a seulrene world. we just live in it</h1>
+  <!-- <button
+  type="button"
+  class="btn btn-link"
+  data-mdb-toggle="modal"
+  data-mdb-target="#modalEmbed"
+>
+    open embeded player
+</button> -->
+<!-- Modal -->
+<div
+  class="modal fade "
+  id="modalEmbed"
+  data-mdb-backdrop="static"
+  data-mdb-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="modalEmbedLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEmbedLabel">No video loaded</h5>
+        <!-- <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button> -->
+      </div>
+      <div class="modal-body">
+          <div class="video-responsive">
+    <iframe
+        id="embed"
+        width="853"
+        height="480"
+        src=""
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded Video">
+    </iframe>
+    <!--https://www.youtube.com/embed/lNvBbh5jDcA-->
+</div>
+      </div>
+      <div class="modal-footer">
+        <button 
+            type="button" 
+            class="btn btn-link" 
+            data-mdb-dismiss="modal"
+            onclick="setEmbed('','')">
+          Close
+        </button>
+        <!--button type="button" class="btn btn-primary">Understood</button-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Jumbotron -->
+<div class="container-fluid">
+  <div class='container-fluid'>
 
 
     
@@ -47,33 +109,49 @@
     <div class="card-body">
       <h5 class="card-title">wendy thought seulrene were about to kiss in the ootn teaser</h5>
       <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <button type="button" onclick="setEmbed('wendy thought seulrene were about to kiss in the ootn teaser','https://vlive.tv/embed/6436?&begin=456&end=482')" class="btn btn-link">Embed</button>
-      <a href="https://vlive.tv/embed/6436?&begin=456&end=482" target="_blank">
+      <button type="button" onclick="setEmbed('wendy thought seulrene were about to kiss in the ootn teaser','https://vlive.tv/video/6436?&begin=456&end=482')" class="btn btn-link">Embed</button>
+      <a href="https://vlive.tv/video/6436?&begin=456&end=482" target="_blank">
           <button type="button" class="btn btn-link">Go to video</button>
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">160315</div>
+<div class="card mb-3">
+    <!--div class="card-header">160315</div-->
     <div class="card-body">
-      <p class="card-text">
-        wendy thought seulrene were about to kiss in the ootn teaser
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [160315] wendy thought seulrene were about to kiss in the ootn teaser
+        </div>
+      <!--  -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('wendy thought seulrene were about to kiss in the ootn teaser','https://vlive.tv/video/6436?&begin=456&end=482')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="https://vlive.tv/video/6436?&begin=456&end=482" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
         
-      </p>
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
-            onclick="setEmbed('wendy thought seulrene were about to kiss in the ootn teaser','https://vlive.tv/embed/6436?&begin=456&end=482')" 
+            onclick="setEmbed('wendy thought seulrene were about to kiss in the ootn teaser','https://vlive.tv/video/6436?&begin=456&end=482')" 
             class="btn btn-link float-end">
             Embed here
         </button>
-      <a href="https://vlive.tv/embed/6436?&begin=456&end=482" target="_blank">
+      <a href="https://vlive.tv/video/6436?&begin=456&end=482" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>    
            
     
@@ -88,33 +166,53 @@
     <div class="card-body">
       <h5 class="card-title">about close friends (wendy are you watching?)</h5>
       <h6 class="card-subtitle mb-2 text-muted">they are so awkward singing together it's killing me and when irene just goes 'what??' omfg</h6>
-      <button type="button" onclick="setEmbed('about close friends (wendy are you watching?)','https://vlive.tv/embed/14431?&begin=978&end=1434')" class="btn btn-link">Embed</button>
-      <a href="https://vlive.tv/embed/14431?&begin=978&end=1434" target="_blank">
+      <button type="button" onclick="setEmbed('about close friends (wendy are you watching?)','https://vlive.tv/video/14431?&begin=978&end=1434')" class="btn btn-link">Embed</button>
+      <a href="https://vlive.tv/video/14431?&begin=978&end=1434" target="_blank">
           <button type="button" class="btn btn-link">Go to video</button>
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">161001</div>
+<div class="card mb-3">
+    <!--div class="card-header">161001</div-->
     <div class="card-body">
-      <p class="card-text">
-        about close friends (wendy are you watching?)
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [161001] about close friends (wendy are you watching?)
+        </div>
+      <!-- 
+      <small class='card-text text-muted float-end'>
         they are so awkward singing together it's killing me and when irene just goes 'what??' omfg
-      </p>
+      </small>
+       -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('about close friends (wendy are you watching?)','https://vlive.tv/video/14431?&begin=978&end=1434')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="https://vlive.tv/video/14431?&begin=978&end=1434" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
+        
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
-            onclick="setEmbed('about close friends (wendy are you watching?)','https://vlive.tv/embed/14431?&begin=978&end=1434')" 
+            onclick="setEmbed('about close friends (wendy are you watching?)','https://vlive.tv/video/14431?&begin=978&end=1434')" 
             class="btn btn-link float-end">
             Embed here
         </button>
-      <a href="https://vlive.tv/embed/14431?&begin=978&end=1434" target="_blank">
+      <a href="https://vlive.tv/video/14431?&begin=978&end=1434" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>    
         
             
@@ -123,33 +221,49 @@
     <div class="card-body">
       <h5 class="card-title">trainee stories part 1</h5>
       <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <button type="button" onclick="setEmbed('trainee stories part 1','https://vlive.tv/embed/14431?&begin=1517&end=1617')" class="btn btn-link">Embed</button>
-      <a href="https://vlive.tv/embed/14431?&begin=1517&end=1617" target="_blank">
+      <button type="button" onclick="setEmbed('trainee stories part 1','https://vlive.tv/video/14431?&begin=1517&end=1617')" class="btn btn-link">Embed</button>
+      <a href="https://vlive.tv/video/14431?&begin=1517&end=1617" target="_blank">
           <button type="button" class="btn btn-link">Go to video</button>
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">161001</div>
+<div class="card mb-3">
+    <!--div class="card-header">161001</div-->
     <div class="card-body">
-      <p class="card-text">
-        trainee stories part 1
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [161001] trainee stories part 1
+        </div>
+      <!--  -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('trainee stories part 1','https://vlive.tv/video/14431?&begin=1517&end=1617')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="https://vlive.tv/video/14431?&begin=1517&end=1617" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
         
-      </p>
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
-            onclick="setEmbed('trainee stories part 1','https://vlive.tv/embed/14431?&begin=1517&end=1617')" 
+            onclick="setEmbed('trainee stories part 1','https://vlive.tv/video/14431?&begin=1517&end=1617')" 
             class="btn btn-link float-end">
             Embed here
         </button>
-      <a href="https://vlive.tv/embed/14431?&begin=1517&end=1617" target="_blank">
+      <a href="https://vlive.tv/video/14431?&begin=1517&end=1617" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>    
         
             
@@ -158,33 +272,49 @@
     <div class="card-body">
       <h5 class="card-title">???</h5>
       <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <button type="button" onclick="setEmbed('???','https://vlive.tv/embed/14431?&begin=1688&end=0')" class="btn btn-link">Embed</button>
-      <a href="https://vlive.tv/embed/14431?&begin=1688&end=0" target="_blank">
+      <button type="button" onclick="setEmbed('???','https://vlive.tv/video/14431?&begin=1688&end=0')" class="btn btn-link">Embed</button>
+      <a href="https://vlive.tv/video/14431?&begin=1688&end=0" target="_blank">
           <button type="button" class="btn btn-link">Go to video</button>
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">161001</div>
+<div class="card mb-3">
+    <!--div class="card-header">161001</div-->
     <div class="card-body">
-      <p class="card-text">
-        ???
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [161001] ???
+        </div>
+      <!--  -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('???','https://vlive.tv/video/14431?&begin=1688&end=0')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="https://vlive.tv/video/14431?&begin=1688&end=0" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
         
-      </p>
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
-            onclick="setEmbed('???','https://vlive.tv/embed/14431?&begin=1688&end=0')" 
+            onclick="setEmbed('???','https://vlive.tv/video/14431?&begin=1688&end=0')" 
             class="btn btn-link float-end">
             Embed here
         </button>
-      <a href="https://vlive.tv/embed/14431?&begin=1688&end=0" target="_blank">
+      <a href="https://vlive.tv/video/14431?&begin=1688&end=0" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>    
         
             
@@ -193,65 +323,61 @@
     <div class="card-body">
       <h5 class="card-title">this whole thing honestly</h5>
       <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <button type="button" onclick="setEmbed('this whole thing honestly','https://vlive.tv/embed/14431?&begin=0&end=2959')" class="btn btn-link">Embed</button>
-      <a href="https://vlive.tv/embed/14431?&begin=0&end=2959" target="_blank">
+      <button type="button" onclick="setEmbed('this whole thing honestly','https://vlive.tv/video/14431?&begin=0&end=2959')" class="btn btn-link">Embed</button>
+      <a href="https://vlive.tv/video/14431?&begin=0&end=2959" target="_blank">
           <button type="button" class="btn btn-link">Go to video</button>
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">161001</div>
+<div class="card mb-3">
+    <!--div class="card-header">161001</div-->
     <div class="card-body">
-      <p class="card-text">
-        this whole thing honestly
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [161001] this whole thing honestly
+        </div>
+      <!--  -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('this whole thing honestly','https://vlive.tv/video/14431?&begin=0&end=2959')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="https://vlive.tv/video/14431?&begin=0&end=2959" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
         
-      </p>
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
-            onclick="setEmbed('this whole thing honestly','https://vlive.tv/embed/14431?&begin=0&end=2959')" 
+            onclick="setEmbed('this whole thing honestly','https://vlive.tv/video/14431?&begin=0&end=2959')" 
             class="btn btn-link float-end">
             Embed here
         </button>
-      <a href="https://vlive.tv/embed/14431?&begin=0&end=2959" target="_blank">
+      <a href="https://vlive.tv/video/14431?&begin=0&end=2959" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>    
            
     
 
 </div>
-    <div class="float-end">
-      <h4 id="currentEmbed"></h4>
-<div class="video-responsive">
-    <iframe
-        id="embedplayer"
-        width="853"
-        height="480"
-        src="https://www.youtube.com/embed/lNvBbh5jDcA"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded Video">
-    </iframe>
-</div>
-    </div>
-    
-    <div class="row align-items-start">
-      <div class="col">
-        
-      </div>
-      <div class="col-6">
-        
-      </div>
-    </div>
 </div>
 
 
+
+
+    </div>
   <script type = "text/javascript" src="assets/js/script.js"></script>
+  <script type = "text/javascript" src="assets/js/mdb.min.js"></script>
   </body>
 </html>

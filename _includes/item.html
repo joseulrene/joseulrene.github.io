@@ -10,17 +10,37 @@
         </a>
     </div>
   </div-->
-  <div class="card mb-3">
-    <div class="card-header">{{i.date}}</div>
+<div class="card mb-3">
+    <!--div class="card-header">{{i.date}}</div-->
     <div class="card-body">
-      <p class="card-text">
-        {{i.text}}
-      </p>
-      <p class='card-text text-muted'>
+        <div class="card-text float-start moment-title">
+            [{{i.date}}] {{i.text}}
+        </div>
+      <!-- {% if i.bonus %}
+      <small class='card-text text-muted float-end'>
         {{i.bonus}}
-      </p>
+      </small>
+      {% endif %} -->
+        <!-- <button 
+            type="button" 
+            onclick="setEmbed('{{i.text}}','{{i.url}}')" 
+            class="btn btn-link float-end"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modalEmbed"
+            >
+            Load
+        </button> -->
+        <a  href="{{hrefUrl}}" 
+            target="_blank" 
+            role="button" 
+            class="btn btn-link float-end">
+                Go to video page
+        </a>
+
+    
+        
     </div>
-    <div class="card-footer">
+    <!--div class="card-footer">
         <button 
             type="button" 
             onclick="setEmbed('{{i.text}}','{{i.url}}')" 
@@ -30,5 +50,5 @@
       <a href="{{hrefUrl}}" target="_blank">
           <button type="button" class="btn btn-link float-end">Go to video page</button>
         </a>
-    </div>
+    </div-->
   </div>

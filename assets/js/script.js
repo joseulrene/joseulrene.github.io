@@ -1,6 +1,21 @@
+var embedUrl = "";
+var player = null; 
+var playerLabel = null; 
+
+$(document).ready(function() {
+    player = document.getElementById("embed");
+    playerLabel = document.getElementById("modalEmbedLabel"); 
+});
+
 function setEmbed(title,url) {
-    var player = document.getElementById("embedplayer");
-    var current = document.getElementById("currentEmbed");
+    embedUrl = url;
+    if (player == null) player = document.getElementById("embed");
+    if (playerLabel == null) var playerLabel = document.getElementById("modalEmbedLabel");
     player.setAttribute("src",url);
-    current.innerText = title;
+    playerLabel.innerText = title;
+}
+
+function reload(){
+    if (player == null) player = document.getElementById("embed");
+    player.setAttribute("src",embedUrl);
 }
