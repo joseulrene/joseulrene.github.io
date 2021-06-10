@@ -53,12 +53,34 @@ items.sort((a,b) => {
                     a.t[0] > b.t[0] ? 1 :
                         a.t[0] < b.t[0] ? -1 :
                             a.t[1] > b.t[1] ? 1 : -1
-    // console.log(i,a,b,r);
-    console.log(i,a.date < b.date,a.date,b.date);
     i += 1;
     return r;
 });
 
 
-export const list = items;
+export const list = items.map(i => {
+    var vliveurl = `https://vlive.tv/embed/${i.id}?&begin=${i.t[0]*60+i.t[1]}&end=${i.t[2]*60+i.t[3]}`;
+    var yturl = `https://youtube.com/embed /${i.id}?start=${i.t[0]*60+i.t[1]}&end=${i.t[2]*60+i.t[3]}`;
+    return {
+        id: i.id,
+        url: i.vlive ? vliveurl : yturl,
+        date : i.date,
+        text: i.text,
+        bonus: i.bonus ? i.bonus : ""
+    }
+});
+console.log(list);
+const makeTextFile = () => {
+    // This creates the file. 
+    // In my case, I have an array, and each item in 
+    // the array should be on a new line, which is why
+    // I use .join('\n') here.
+    const data = new Blob([JSON.stringify(list)], { type: 'text/plain' })
 
+    // this part avoids memory leaks
+    if (downloadLink !== '') window.URL.revokeObjectURL(downloadLink)
+
+    // update the download link state
+    setDownloadLink(window.URL.createObjectURL(data))
+  }
+  makeTextFile()

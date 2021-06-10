@@ -1,4 +1,3 @@
-{{ site.data.moments | inspect }}
 {% for i in site.data.moments %}
 {% assign start = i.t.start.min | times: 60 | plus: i.t.start.sec %}
 {% assign end = i.t.end.min | times: 60 | plus: i.t.end.sec %}
@@ -18,7 +17,7 @@
     {% endif %}
 </p>
 <script>
-  
+
 </script>
       
 {% endfor %}
