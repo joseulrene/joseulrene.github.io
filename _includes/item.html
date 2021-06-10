@@ -1,12 +1,24 @@
-{% for item in site.data.moments %}
+{{ site.data.moments | inspect }}
+{% for i in site.data.moments %}
+{% assign start = i.t.start.min | times: 60 | plus: i.t.start.sec %}
+{% assign end = i.t.end.min | times: 60 | plus: i.t.end.sec %}
 <p>
-    <a href="" 
-    {% if page.url == item.link %}
-      class="current"
-    {% endif %}>
-      {{ item.text }}
+    <a href="
+    {% case i.type %}
+      {% when 'vlive' %}
+        https://vlive.tv/embed/{{i.id}}?&begin={{start}}
+      {% when 'yt' %}
+        https://youtube.com/embed/{{i.id}}?start={{start}}&end={{end}}
+      {% endcase %}
+    " target="_blank">
+      {{ i.text }}
     </a>
-    <strike>{{item.bonus}}</strike>
+    {% if i.bonus != "" %}
+      <br/><strike>{{i.bonus}}</strike>
+    {% endif %}
 </p>
+<script>
+  
+</script>
       
 {% endfor %}
