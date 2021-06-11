@@ -10,4 +10,6 @@
 
 @media (max-width: 600px) { .form-width { width: 100%; } }
 
+#newMoment { min-height: 10em; }
+
 /*# sourceMappingURL=styles.css.map */
