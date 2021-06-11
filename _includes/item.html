@@ -1,9 +1,21 @@
 <div class="card mb-3">
     <div class="card-body">
-        <div class="d-flex justify-content-between">
-            <div class="card-text moment-title">
+        <div 
+            
+            class="d-flex justify-content-between"
+            >
+
+            <a 
+                class="card-text moment-title"
+                href="#caption{{i.caption}}"
+                data-mdb-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="caption{{i.caption}}">
                 [{{i.date}}] {{i.text}}
-            </div>
+                {%if i.caption%}
+                <span class="badge"><i class="fas fa-closed-captioning"></span></i>
+                {%endif%}
+            </a>
 
             <a  href="{{i.url}}" 
                 target="_blank" 
@@ -13,6 +25,18 @@
             </a>
         </div>
         
+        {%if i.caption%}
+        {% assign caption = site.captions | where: "unique_id", i.caption %}
+        
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="caption{{i.caption}}">
+            <div class="container-sm captions">
+                {{caption[0].content | markdownify }}
+            </div>
+            
+            
+        </div>
+        {%endif%}
     
                 
     </div>

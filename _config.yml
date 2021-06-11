@@ -1,1 +1,5 @@
-
+collections:
+  captions:
+    output: true
+plugins:
+  - jemoji

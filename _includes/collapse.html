@@ -1,14 +1,17 @@
 <a
   class="btn btn-link"
-  data-mdb-toggle="collapse"
+  
   href="#embedPlayerCollapse"
   role="button"
+  data-mdb-toggle="collapse"
   aria-expanded="false"
   aria-controls="embedPlayerCollapse"
 >
     Embed Player
 </a>
+{%if i.caption%}
 <!-- Collapsed content -->
 <div class="collapse mt-3" id="embedPlayerCollapse">
-    {% include embedplayer.html %}
+    {{i.caption}}
 </div>
+{%endif%}

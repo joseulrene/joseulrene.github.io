@@ -36,8 +36,8 @@ function openModalWithCode(){
     }
     console.log(url, start, end, text, id, t, hasStart)
     
-    var startsecs = t[0]*60+t[1];
-    var endsecs = t[2]*60+t[3];
+    var startsecs = Number(t[0])*60+Number(t[1]);
+    var endsecs = Number(t[2])*60+Number(t[3]);
 
     // var vliveurl = `https://vlive.tv/embed/${i.id}?&begin=${startsecs}&end=${endsecs}`;
     // var yturl = `https://youtube.com/embed/${i.id}?start=${start}&end=${end}`;
@@ -56,7 +56,7 @@ function openModalWithCode(){
         url: url,
         date : date,
         text: text,
-        // bonus: i.bonus ? i.bonus : ""
+        bonus: ""
     }
     var result = ""
     for (var p in i){
