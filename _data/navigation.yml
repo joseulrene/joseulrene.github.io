@@ -1,8 +1,0 @@
-- name: Home
-  link: /
-- name: New
-  link: /new.html
-- name: json file
-  dl: id="jsondata" download='list.json'
-- name: yaml file
-  dl: id="yamldata" download='moments.yml'
